@@ -1,22 +1,30 @@
-<!doctype>
-<html>
-  <head>
-    <title>Hello, User</title>
-    <link rel="stylesheet"
-          type="text/css"
-	  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </head>
-  <body>
+<!doctype html>
+<html
+<head>
+  <?php require './head.php' ?>
+  <style>
+    p {
+      font-size: 18px;
+    }
 
-    <div class="container">
-    <? php print_r($_GET) ?>
-      <div class="jumbotron">
-        <h1>Welcome, Stranger!</h1>
-      </div>
+    footer {
+      padding: 2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
 
-      <?php require './content.php' ?>
+  <?php print_r($_GET) ?>
 
-    </div>
+  <?php 
 
-  </body>
+    require './nav.php';
+    require './content.php';
+    require './footer.php';
+
+  ?>
+  </div>
+</body>
 </html>
